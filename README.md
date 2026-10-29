@@ -14,7 +14,8 @@ Windows 11 VM (Sysmon + Splunk Universal Forwarder) -> Splunk Enterprise on host
 - Sysmon events arrive as XML, so fields (Image, CommandLine, ParentImage, User) are extracted with `rex`
 - Telemetry generated with Atomic Red Team plus simulated benign IT activity
   
-![Splunk sourcetypes] (Screenshots/Splunk Source Types.png)
+
+![Splunk sourcetypes](Screenshots/Splunk%20Source%20Types.png)
 
 ## Detections
 | ATT&CK | Detection | Logic |
@@ -23,13 +24,13 @@ Windows 11 VM (Sysmon + Splunk Universal Forwarder) -> Splunk Enterprise on host
 | T1110 | Brute force | 10 or more Windows 4625 failed logons in 5 minutes |
 | T1053.005 | Scheduled task persistence | Sysmon EventCode 1, schtasks.exe with /create |
 
-![Encoded PowerShell](Screenshots/Encoded PowerShell.png)
+![Encoded PowerShell](Screenshots/Encoded%20PowerShell.png)
 
-![Brute force](Screenshots/Brute force.png)
+![Brute force](Screenshots/Brute%20force.png)
 
-![Scheduled task](Screenshots/Scheduled task.png)
+![Scheduled task](Screenshots/Scheduled%20task.png)
 
-!{Saved alerts](Screenshots/Alerts.png)
+![Saved alerts](Screenshots/Alerts.png)
 
 
 ## Auto-resolution (mini Trusted Behavior Registry)
@@ -40,7 +41,7 @@ Windows 11 VM (Sysmon + Splunk Universal Forwarder) -> Splunk Enterprise on host
 | TBR-001 | Encoded PowerShell | parent image inventory_agent.exe | Approved IT inventory agent |
 | TBR-002 | Scheduled Task | command line BackupNightly | Approved nightly backup job |
 
-![Auto-resolve output](Screenshots/Auto-resolve output.png)
+![Auto-resolve output](Screenshots/Auto-resolve%20output.png)
 
 Validation: all Atomic Red Test activity landed in `escalated.csv`.
 
