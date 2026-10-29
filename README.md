@@ -24,16 +24,16 @@ Windows 11 VM (Sysmon + Splunk Universal Forwarder) -> Splunk Enterprise on host
 | T1110 | Brute force | 10 or more Windows 4625 failed logons in 5 minutes |
 | T1053.005 | Scheduled task persistence | Sysmon EventCode 1, schtasks.exe with /create |
 
-![Encoded PowerShell](screenshots/02-detection-encoded-powershell.png)
+Encoded PowerShell
 <img width="1568" height="780" alt="image" src="https://github.com/user-attachments/assets/d677cd7b-1cd6-4c0c-a7b6-6e7d907c9865" />
 
-![Brute force](screenshots/03-detection-brute-force.png)
+Brute force
 <img width="1568" height="387" alt="image" src="https://github.com/user-attachments/assets/f022059d-6645-47d4-a436-243be331094d" />
 
-![Scheduled task](screenshots/04-detection-scheduled-task.png)
+Scheduled task
 <img width="1568" height="771" alt="image" src="https://github.com/user-attachments/assets/7f00e894-0edd-40ca-9992-0ff1b531e70d" />
 
-![Saved alerts](screenshots/05-saved-alerts.png)
+Saved alerts
 <img width="1743" height="537" alt="image" src="https://github.com/user-attachments/assets/1623dbe7-6043-4638-b29e-b31789496677" />
 
 
