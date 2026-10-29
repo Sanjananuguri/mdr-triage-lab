@@ -2,6 +2,7 @@ import csv, json
 from collections import Counter
 
 alerts = list(csv.DictReader(open("alerts.csv", encoding="utf-8-sig")))
+fields = list(alerts[0].keys()) + ["resolution"]
 registry = json.load(open("allowlist.json"))
 resolved, escalated = [], []
 
@@ -16,7 +17,7 @@ for a in alerts:
 
 for name, rows in (("resolved.csv", resolved), ("escalated.csv", escalated)):
     with open(name, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=list(alerts[0].keys()) + ["resolution"])
+        w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader(); w.writerows(rows)
 
 total = len(alerts)
