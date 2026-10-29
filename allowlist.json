@@ -1,0 +1,4 @@
+[
+  {"id":"TBR-001","rule":"Encoded PowerShell","field":"parent_image","contains":"inventory_agent.exe","reason":"Approved IT inventory agent"},
+  {"id":"TBR-002","rule":"Scheduled Task","field":"command_line","contains":"BackupNightly","reason":"Approved nightly backup job"}
+]
