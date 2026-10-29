@@ -50,7 +50,10 @@ Saved alerts
 Validation: all Atomic Red Test activity landed in `escalated.csv`.
 
 ## Escalation reports
-See the `reports/` folder: In the files
+See the `reports/` folder: 
+- [Report 1: Encoded PowerShell](reports/01-encoded-powershell.md)
+- [Report 2: Scheduled Task Persistence](reports/02-scheduled-task-persistence.md)
+- [Report 3: Brute Force](reports/03-brute-force.md)
 
 ## Lessons learned
 - Forwarder access to the Sysmon log needed Event Log Readers permission (errorCode=5)
