@@ -1,0 +1,6 @@
+rule,host,user,src_ip,parent_image,command_line,resolution
+Encoded PowerShell,sanjananuguri,sanjananuguri\sanja,,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,"""powershell.exe"" &amp; {Out-ATHPowerShellCommandLineParameter -CommandLineSwitchType Hyphen -EncodedCommandParamVariation E -UseEncodedArguments -EncodedArgumentsParamVariation EncodedArguments -Execute -ErrorAction Stop}",Escalate to analyst
+Encoded PowerShell,sanjananuguri,sanjananuguri\sanja,,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,"""powershell.exe"" &amp; {Out-ATHPowerShellCommandLineParameter -CommandLineSwitchType Hyphen -CommandParamVariation C -UseEncodedArguments -EncodedArgumentsParamVariation EA -Execute -ErrorAction Stop}",Escalate to analyst
+Scheduled Task,sanjananuguri,sanjananuguri\sanja,,C:\Windows\System32\cmd.exe,"schtasks  /create /tn ""T1053_005_OnStartup"" /sc onstart /ru system /tr ""cmd.exe /c calc.exe""",Escalate to analyst
+Scheduled Task,sanjananuguri,sanjananuguri\sanja,,C:\Windows\System32\cmd.exe,"schtasks  /create /tn ""T1053_005_OnLogon"" /sc onlogon /tr ""cmd.exe /c calc.exe"" ",Escalate to analyst
+Brute Force,sanjananuguri,fakeadmin,,,failed logons in 5 min: 15,Escalate to analyst
