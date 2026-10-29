@@ -14,8 +14,7 @@ Windows 11 VM (Sysmon + Splunk Universal Forwarder) -> Splunk Enterprise on host
 - Sysmon events arrive as XML, so fields (Image, CommandLine, ParentImage, User) are extracted with `rex`
 - Telemetry generated with Atomic Red Team plus simulated benign IT activity
   
-<img width="1743" height="382" alt="image" src="https://github.com/user-attachments/assets/df239021-639a-44b2-bda4-35d933bc4976" />
-
+![Splunk sourcetypes] (Screenshots/Splunk Source Types.png)
 
 ## Detections
 | ATT&CK | Detection | Logic |
@@ -24,17 +23,13 @@ Windows 11 VM (Sysmon + Splunk Universal Forwarder) -> Splunk Enterprise on host
 | T1110 | Brute force | 10 or more Windows 4625 failed logons in 5 minutes |
 | T1053.005 | Scheduled task persistence | Sysmon EventCode 1, schtasks.exe with /create |
 
-Encoded PowerShell
-<img width="1568" height="780" alt="image" src="https://github.com/user-attachments/assets/d677cd7b-1cd6-4c0c-a7b6-6e7d907c9865" />
+![Encoded PowerShell](Screenshots/Encoded PowerShell.png)
 
-Brute force
-<img width="1568" height="387" alt="image" src="https://github.com/user-attachments/assets/f022059d-6645-47d4-a436-243be331094d" />
+![Brute force](Screenshots/Brute force.png)
 
-Scheduled task
-<img width="1568" height="771" alt="image" src="https://github.com/user-attachments/assets/7f00e894-0edd-40ca-9992-0ff1b531e70d" />
+![Scheduled task](Screenshots/Scheduled task.png)
 
-Saved alerts
-<img width="1743" height="537" alt="image" src="https://github.com/user-attachments/assets/1623dbe7-6043-4638-b29e-b31789496677" />
+!{Saved alerts](Screenshots/Alerts.png)
 
 
 ## Auto-resolution (mini Trusted Behavior Registry)
@@ -45,7 +40,7 @@ Saved alerts
 | TBR-001 | Encoded PowerShell | parent image inventory_agent.exe | Approved IT inventory agent |
 | TBR-002 | Scheduled Task | command line BackupNightly | Approved nightly backup job |
 
-![Auto-resolve output](screenshots/06-auto-resolve-output.png)
+![Auto-resolve output](Screenshots/Auto-resolve output.png)
 
 Validation: all Atomic Red Test activity landed in `escalated.csv`.
 
